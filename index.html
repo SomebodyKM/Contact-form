@@ -8,45 +8,117 @@
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <section class="form">
+    <form class="contact-form" novalidate>
+      <h1>Contact Us</h1>
+    
+      <div class="name-input">
+        <div class="firstname-input">
+          <div class="input-titles">
+            <h3>First Name</h3>
+            <span>*</span>
+          </div>
+          <label>
+            <input type="text" id="firstname" name="firstname" autocomplete="off" required>
+          </label>
+          <div class="field-required-msg">
+            This field is required
+          </div>
+        </div>
+        <div class="lastname-input">
+          <div class="input-titles">
+            <h3>Last Name</h3>
+            <span>*</span>
+          </div>
+          <label>
+            <input type="text" id="lastname" name="lastname" autocomplete="off" required>
+          </label>
+          <div class="field-required-msg">
+                This field is required
+          </div>
+        </div>
+      </div>
+    
+      <div class="email-input">
+        <div class="input-titles">
+          <h3>Email Address</h3>
+          <span>*</span>
+        </div>
+        <label>
+          <input type="email" id="email" name="email" autocomplete="off" required>
+        </label>
+        <div class="email-validation">
+          Please enter a valid email address
+        </div>
+        <div class="field-required-msg">
+          This field is required
+        </div>
+      </div>
+    
+      <div class="query-type-input">
+        <div class="input-titles">
+          <h3>Query Type</h3>
+          <span>*</span>
+        </div>
+        <div class="query-type">
+          <label>
+            <input type="radio" value="General Enquiry" id="general-enquiry" name="query-type" required>
+            <span class="custom-radio"></span>
+            General Enquiry
+          </label>
+          <label>
+            <input type="radio" value="Support Request" id="support-request" name="query-type" required>
+            <span class="custom-radio"></span>
+            Support Request
+          </label>
+        </div>
+        <div class="field-required-msg">
+          Please select a query type
+        </div>
+      </div>
+    
+      <div class="msg-input">
+        <div class="input-titles">
+          <h3>Message</h3>
+          <span>*</span>
+        </div>
+        <label>
+          <textarea name="message" id="message" required rows="5"></textarea>
+        </label>
+        <div class="field-required-msg">
+          This field is required
+        </div>
+      </div>
+    
+      <div class="agreement-checkbox">
+        <label>
+          <input type="checkbox" id="agreement" name="agreement" required>
+          <span class="custom-checkbox"></span>
+          <span class="comfirm-msg">
+            I consent to being contacted by the team
+            <span>*</span>
+          </span>
+        </label>
+        <div class="field-required-msg">
+          To submit this form, please consent to being contacted
+        </div>
+      </div>
+    
+      <button type="submit">Submit</button>
+    
+    </form>
+    <div class="submit-msg">
+      <div class="submit-title">
+        <img src="./assets/images/icon-success-check.svg">
+        <h3>Message Sent!</h3>
+      </div>
+      Thanks for completing the form. We'll be in touch soon!
+    </div>
+  </section>
+    
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>
